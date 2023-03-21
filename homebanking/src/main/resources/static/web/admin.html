@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/logominhub.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>ADMIN</title>
+</head>
+<body id="app" class="bodyAccounts">
+  <main>
+    <!-- CREATION CARD -->
+    <div class="creationCardForm" @submit.prevent>
+        <form class="my-form" >
+          <h2>CREATE LOAN</h2>
+          <div class="container">
+          <ul class="ulCreationCard">
+              <li>
+                <div class="grid grid-2">
+                  <input type="text" placeholder="Name" required v-model="name">  
+                  <input type="text" placeholder="maxAmount" required  v-model="maxAmount">
+                </div>
+              </li>
+              <li>
+                <div class="grid grid-2">
+                  <input type="text" placeholder="Payments" required  v-model="payments">  
+                  <input type="text" placeholder="Fee"  v-model="fee">
+                </div>
+              </li>    
+              <li>
+                <textarea placeholder="Message"></textarea>
+              </li>   
+              <li>
+                <div class="grid grid-3">
+                  <button v-on:click="createLoan" class="btn-grid button2" type="submit" >
+                    <span class="back">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                    </span>
+                    <span  class="front">SUBMIT</span>
+                  </button>
+                  <button class="btn-grid button2" type="reset" v-on:click="alertLogOut()">
+                    <span class="back">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                    </span>
+                    <span class="front">LOGOUT</span>
+                  </button> 
+                </div>
+              </li>    
+            </ul>
+          </div>
+        </form>
+      </div>
+        <!-- CREATION CARD -->
+  </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../assets/javascript/admin.js"></script>
+</body>
+</html>

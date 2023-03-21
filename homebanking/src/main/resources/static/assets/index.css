@@ -1,0 +1,303 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+}
+
+body {
+  min-width: 90vw;
+  min-height: 90vh;
+  /* justify-content: center; */
+  font-family: "Open Sans", sans-serif;
+  background-image: url(./img/indexxx.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  min-height: 90vh;
+  margin-top: 2rem;
+  text-shadow: 4px 3px 2px #000000;
+  text-align: center;
+}
+
+h2 {
+  /* display: flex;
+    justify-content: center; */
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 2rem;
+  color: var(--bs-highlight-bg);
+  text-shadow: 4px 3px 2px #000000;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.logo {
+  width: 22rem;
+  margin: 4px;
+}
+
+.divGeneral {
+  margin-top: 8rem;
+}
+
+.bordeLogo {
+  background-color: #000000c4;
+  box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
+  border-bottom: 41px;
+  /* border-radius: 10px 10px 0px 0px; */
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute;
+    top: 50%;
+    left: 50%; */
+  width: 360px;
+  padding: 40px;
+  margin: 10px auto;
+  /* transform: translate(-50%, -55%); */
+  background: #000000c4;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  /* border-radius: 0px 0px 10px 10px; */
+  font-family: 'Bebas Neue', cursive;
+}
+
+.login-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: var(--bs-highlight-bg);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--bs-highlight-bg);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--bs-highlight-bg);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+  top: -37px;
+  left: 0;
+  color: var(--bs-highlight-bg);
+  font-size: 20px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 30px;
+  color: var(--bs-highlight-bg);
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 3px
+}
+
+.login-box a:hover {
+  background: var(--bs-highlight-bg);
+  color: #272727;
+  border-radius: 5px;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.login-box p:last-child {
+  color: #aaa;
+  font-size: 20px;
+}
+
+.login-box a.a2 {
+  color: var(--bs-highlight-bg);
+  text-decoration: none;
+}
+
+.login-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
+
+.texto {
+  color: var(--bs-highlight-bg);
+  text-shadow: 6px 1px 5px rgb(0 0 0 / 64%);
+  max-width: 50rem;
+  background: #000000c4;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #fff3cd78;
+  margin-top: 1rem;
+  font-family: 'Bebas Neue', cursive;
+  -webkit-box-shadow: 10px 10px 5px -3px rgb(0 0 0 / 82%);
+}
+
+.texto-2 {
+  margin-top: 1rem;
+  color: var(--bs-highlight-bg);
+  text-shadow: 6px 1px 5px rgb(0 0 0 / 64%);
+  max-width: 50rem;
+  text-align: start;
+  padding: 10px;
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+.ul-1 {
+  border: 2px solid #fff3cd78;
+  background: #000000c4;
+  margin-bottom: 10px;
+  font-family: 'Bebas Neue', cursive;
+  -webkit-box-shadow: 10px 10px 5px -3px rgb(0 0 0 / 82%);
+}
+
+.text {
+  border-bottom: 2px solid #fff3cd78;
+  border-top: 3px solid #fff3cd78;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.texto-p {
+  border-bottom: 2px solid #fff3cd78;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+footer {
+  min-height: 10vh;
+  background-color: #000000c4;
+  text-shadow: 4px 3px 2px #000000;
+  color: var(--bs-highlight-bg);
+  padding-right: 1rem;
+  margin-top: 8px;
+  border-top: 1px solid var(--bs-highlight-bg);
+}
+.imgs {
+  width: 20rem;
+  margin: 10px;
+  color: none;
+}
+.imgs i:hover {
+  font-size: 2.5rem !important;
+  transition: all 0.3s;
+}
